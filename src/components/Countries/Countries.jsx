@@ -7,6 +7,8 @@ const Countries = ({countriesPromise}) => {
 
     const handleVisitedCountries =(country)=>{
         console.log('handle visited country clicked',country);
+        const newVisitedCountries =[...visitedCountries,country];
+        setVisitedCountries(newVisitedCountries);
     }
 
     const countriesData = use(countriesPromise);
